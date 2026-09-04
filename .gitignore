@@ -1,0 +1,158 @@
+# ==============================================================================
+# High Eagle - Root Git Ignore Configuration
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Environment & Sensitive Credentials (NEVER COMMIT SENSITIVE SECRETS!)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+*.env
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+# Preserve example/template environment files so collaborators & CI/CD can use them
+!.env.example
+!.env.*.example
+!backend/.env.example
+!frontend/.env.example
+
+# Private keys, certificates, credentials
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+credentials.json
+client_secrets.json
+
+# ------------------------------------------------------------------------------
+# 2. Databases & Persistent Local Storage
+# ------------------------------------------------------------------------------
+*.sqlite3
+*.sqlite3-journal
+*.db
+db.sqlite3
+backend/db.sqlite3
+
+# Database backups and dumps
+*.dump
+*.sql
+*.sql.gz
+dump/
+data/
+
+# ------------------------------------------------------------------------------
+# 3. Python & Django Backend
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Django Static & Media uploads (generated during local runs / deployments)
+staticfiles/
+media/
+backend/staticfiles/
+backend/media/
+
+# Testing & Coverage
+.tox/
+.coverage
+.coverage.*
+.pytest_cache/
+nosetests.xml
+coverage.xml
+htmlcov/
+*.cover
+
+# ------------------------------------------------------------------------------
+# 4. Node.js & React Frontend (Vite)
+# ------------------------------------------------------------------------------
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+dist-ssr/
+.eslintcache
+.stylelintcache
+
+# Package manager logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------------------------------------------
+# 5. Hosting, Cloud & Deployment Providers
+# ------------------------------------------------------------------------------
+.vercel
+.netlify
+.serverless/
+.terraform/
+*.tfstate*
+Procfile.local
+docker-compose.override.yml
+
+# ------------------------------------------------------------------------------
+# 6. Logs & Temporary Files
+# ------------------------------------------------------------------------------
+logs/
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------------------------
+# 7. Operating System & IDE Specific Files
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDE / Editor configs
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
